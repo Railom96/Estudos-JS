@@ -3,6 +3,8 @@ function meuEscopo () {
     const resultado = document.querySelector('.resultado')
 
     const pessoas = [];
+
+    
     
     function recebeEventoForm (evento) {
         const nome = form.querySelector('.nome');
