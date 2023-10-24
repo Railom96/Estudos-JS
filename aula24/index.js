@@ -4,7 +4,7 @@ entre 0-11 bom dia
 18-23 boa noite
 */
 
-const hora = 22;
+const hora = 32;
 
 if (hora >= 0 && hora <= 11 ) {
     console.log('bom dia!');
@@ -16,4 +16,7 @@ else if (hora >= 12 && hora <= 17) {
 
 else if (hora >= 18 && hora <= 23) {
     console.log('boa noite!');
+}
+else {
+    console.log('Formato de hora invalido, por favor tente novamente!');
 }
