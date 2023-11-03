@@ -32,14 +32,17 @@
                 <p>O besidade grau 3</p>
             </div>
         </div>
-        <div class="form-entradas">
+        <div class="container">
             <h2>Calcule seu IMC</h2>
-            <form action="">
+            <form action="" class="form" id="form">
+                
                 <label for="">Peso:</label>
-                <input class="inputPeso" type="text">
+                <input class="inputPeso" id="inputPesopeso" type="text">
+               
                 <label for="">Altura:</label>
-                <input class="inputAltura" type="text">
-                <button>Enviar</button>
+                <input class="inputAltura" id="inputAltura" type="text">
+                
+                <button type="submit">Enviar</button>
             </form>
             <p id="mostraImc">Resultado</p>
         </div>
