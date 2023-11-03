@@ -8,7 +8,7 @@ function calculaIdade() {
 
     const resultado = `Olá, ${nome}! Sua idade é ${suaIdade} anos.`;
 
-    document.getElementById('resultado').textContent = resultado;
+    document.getElementById('resultado').innerHTML = resultado;
 
 }
 
