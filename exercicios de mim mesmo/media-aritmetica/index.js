@@ -1,22 +1,23 @@
-function calculaMedia(){
-    
-    const nome = parseInt(document.getElementById('nomeAluno').value);
+function calculaMedia() {
+    const nome = document.getElementById('nomeAluno').value;
     const nota1 = parseInt(document.getElementById('nota1').value);
     const nota2 = parseInt(document.getElementById('nota2').value);
     const nota3 = parseInt(document.getElementById('nota3').value);
-    
+
     const media = (nota1 + nota2 + nota3) / 3;
 
+    let resultado;
+
     if (media >= 60) {
-        const resultado = `Olá, ${nome}! Sua média é ${media}, você passou!`;
+        resultado = `Olá, ${nome}! Sua média é ${media}, você passou!`;
     }
 
     else if (media < 60) {
-        const resultado = `Olá, ${nome}! Sua média é ${media}, reprovou.`;
+        resultado = `Olá, ${nome}! Sua média é ${media}. REPROVADO.`;
     }
 
     document.getElementById('resultado').innerHTML = resultado;
-} 
+}
 
 function recebeEventoForm(evento) {
     evento.preventDefault();
@@ -25,3 +26,5 @@ function recebeEventoForm(evento) {
 
 const form = document.getElementById('form');
 form.addEventListener('submit', recebeEventoForm);
+
+
