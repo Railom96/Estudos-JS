@@ -25,7 +25,7 @@ function somaPreco() {
     listaProdutos.appendChild(novoItem);
 
     total += precoProduto;
-    document.getElementById('notinha').textContent = `Total: R$ ${total.toFixed(2)}`;
+    document.getElementById('notinha').innerHTML = `Total: R$ ${total.toFixed(2)}`;
 }
 
 function recebeEventoForm(evento) {
@@ -35,3 +35,4 @@ function recebeEventoForm(evento) {
 
 const form = document.getElementById('form');
 form.addEventListener('submit', recebeEventoForm);
+
