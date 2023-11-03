@@ -6,7 +6,7 @@ function calculaMedia() {
 
     if (!/^[a-zA-Z\s]+$/.test(nome)) {
         alert('O campo de nome deve conter apenas letras e espaços.');
-        return; // Interrompe a execução da função se o nome for inválido
+        return; 
     }
 
     const media = (nota1 + nota2 + nota3) / 3;
