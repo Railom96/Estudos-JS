@@ -1,28 +1,38 @@
+function calculaIMC(){
+    const peso = parseFloat(document.getElementById('peso').value);
+    const altura = parseFloat(document.getElementById('altura').value);
 
+    const imc =  peso / (altura * altura);
 
-// Função para calcular o IMC
-function calcularIMC() {
-    // Obter os valores de peso e altura do formulário
-    const peso = parseFloat(document.getElementById('inputPeso').value);
-    const altura = parseFloat(document.getElementById('inputAltura').value);
+    let grau = 0 
 
-    // Verificar se os valores são válidos
-    if (isNaN(peso) || isNaN(altura) || peso <= 0 || altura <= 0) {
-        document.getElementById('mostraImc').textContent = 'Por favor, insira valores válidos para peso e altura.';
-        return;
-    }
+    if (imc <= 18.4) {
+        grau = `O seu IMC é ${imc.toFixed(2)} ----- Abaixo do peso`
+    } 
+    else if (imc >= 18.5 && imc <= 24.9) {
+        grau = `O seu IMC é ${imc.toFixed(2)} ----- Peso normal`
+    } 
+    else if (imc >= 25 && imc <= 29.9) {
+        grau = `O seu IMC é ${imc.toFixed(2)} ----- Sobre peso`
+    } 
+    else if (imc >= 30 && imc <= 34.9) {
+        grau = `O seu IMC é ${imc.toFixed(2)} ----- Obesidade grau 1`
+    } 
+    else if (imc >= 35 && imc <= 39.9) {
+        grau = `O seu IMC é ${imc.toFixed(2)} ----- Obesidade grau 2`
+    } 
+    else if (imc >= 40) {
+        grau = `O seu IMC é ${imc.toFixed(2)} ----- Obesidade grau 3`
+    } 
 
-    // Calcular o IMC
-    const imc = peso / (altura * altura);
+    document.getElementById('resultado').innerHTML = grau;
 
-    // Exibir o resultado do IMC
-    document.getElementById('mostraImc').textContent = `Seu IMC é: ${imc.toFixed(2)}`;
-
-    // Você também pode adicionar categorias de IMC (ex: magro, normal, obeso) com base no valor de IMC.
 }
 
-// Adicionar um ouvinte de evento para o formulário
-document.getElementById('form').addEventListener('submit', function (e) {
-    e.preventDefault(); // Impedir o envio do formulário padrão
-    calcularIMC(); // Chamar a função de cálculo do IMC
-});
+function recebeEventoForm(evento) {
+    evento.preventDefault();
+    calculaIMC();
+}
+
+const form = document.getElementById('form');
+form.addEventListener('submit', recebeEventoForm);
