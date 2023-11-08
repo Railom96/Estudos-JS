@@ -1,12 +1,42 @@
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .container {
     height: 100vh;
     width: 100vw;
-    background-color: red;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.aFazer {
+    height: 90vh;
+    width: 30vw;
+    background-color: #caced4;  
+    border-radius: 15px;
+    text-align: center;
+}
+
+.emAndamento {
+    height: 90vh;
+    width: 30vw;
+    background-color: #caced4;  
+    border-radius: 15px;
+    text-align: center;
+}
+
+.finalizado {
+    height: 90vh;
+    width: 30vw;
+    background-color: #caced4;  
+    border-radius: 15px;
+    text-align: center;
 }

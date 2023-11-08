@@ -4,23 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../lista-de-tarefas/index.css">
     <title>To do list</title>
+    <link rel="stylesheet" href="../lista-de-tarefas/index.css">
 </head>
 
 <body>
 
-    <div class="container" style="    height: 100vh;
-    width: 100vw;
-    background-color: azure;">
+    <div class="container">
         <div class="aFazer">
+            <br>
             <h2>A fazer</h2>
+            <br>
+            <form action="" id="form-aFazer">
+                <label for="">Nome da tarefa</label>
+                <input type="text">
+                <button type="submit" id="inputAFazer">Criar</button>
+            </form>
+            <br>
+            <p id="resultado-aFazer"></p>
         </div>
+        
         <div class="emAndamento">
+            <br>
             <h2>Em andamento</h2>
+            <br>
+            <form action="" id="form-emAndamento">
+                <label for="">Nome da tarefa</label>
+                <input type="text">
+                <button type="submit" id="inputEmAndamento">Criar</button>
+            </form>
+            <br>
+            <p id="resultado-emAndamento"></p>
         </div>
         <div class="finalizado">
+            <br>
             <h2>Finalizado</h2>
+            <br>
+            <form action="" id="form-finalizado">
+                <label for="">Nome da tarefa</label>
+                <input type="text">
+                <button type="submit" id="inputFinalizado">Criar</button>
+            </form>
+            <br>
+            <p id="resultado-Finalizado"></p>
         </div>
     </div>
     <script src="../lista-de-tarefas/index.js"></script>
